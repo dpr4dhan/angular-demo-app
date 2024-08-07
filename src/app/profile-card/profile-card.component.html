@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+  <img src="{{ user.image}}" class="card-img-top" alt="{{ user.name}}">
+  <div class="card-body">
+    <h5 class="card-title">{{ user.name | uppercase }}</h5>
+    <p class="card-text"><i class="fa-solid fa-envelope"></i> {{ user.email }}</p>
+    <p class="card-text"><i class="fa-solid fa-mobile"></i> {{user.mobile}}</p>
+    <p class="card-text"><i class="fa-solid fa-calendar-days"></i> {{user.dob | date}}</p>
+  </div>
+</div>
