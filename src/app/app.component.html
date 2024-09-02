@@ -1,1 +1,15 @@
-<app-profile />
+<main class="container-fluid py-3">
+  <a [routerLink]="['/']">{{ title }}</a> |
+  <a routerLinkActive="active"
+     routerLink="/about">About</a> |
+  <a routerLinkActive="active"
+     routerLink="/contact-us">Contact Us</a> |
+  <a routerLinkActive="active"
+     routerLink="/login">Login</a>
+  <a routerLinkActive="active"
+     routerLink="/dashboard">Dashboard</a>
+
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</main>
