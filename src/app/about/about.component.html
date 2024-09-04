@@ -1,3 +1,13 @@
-<section class="py-5">
-  <h4>This is about us page.</h4>
+<section class="p-5">
+  <h4 class="text-center">About Us</h4>
+
+  <div *ngIf="contacts">
+    <p *ngFor="let contact of contacts; index as i;">
+      <b>Name:</b> {{ contact.name }}<br />
+      <b>Address:</b> {{ contact.address }}<br />
+      <b>Phone:</b> {{ contact.phone }}
+    </p>
+
+  </div>
+  <p *ngIf="!contacts">No contact information available.</p>
 </section>

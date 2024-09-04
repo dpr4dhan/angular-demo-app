@@ -4,6 +4,9 @@ import {AboutComponent} from "./about/about.component";
 import {ContactComponent} from "./contact/contact.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {LoginComponent} from "./login/login.component";
+import {AuthGuard} from "./auth.guard";
+import {LogoutComponent} from "./logout/logout.component";
+import {CalculatorComponent} from "./calculator/calculator.component";
 
 export const routes: Routes = [
   {
@@ -20,6 +23,7 @@ export const routes: Routes = [
     path: 'contact-us',
     component: ContactComponent,
     title: 'Contact Us',
+    canDeactivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -30,5 +34,17 @@ export const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     title: 'Dashboard',
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
+    title: 'Logout',
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'calculator',
+    component: CalculatorComponent,
+    title: 'Calculator'
   }
 ];

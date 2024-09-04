@@ -1,0 +1,22 @@
+<section class="p-5">
+
+  <div class="col-md-5 offset-md-3 border p-4 rounded">
+    <h4 class="text-center mb-4">Calculator</h4>
+    <div class="mb-3">
+      <input [(ngModel)]="num1" type="number" placeholder="Number 1" class="form-control"/>
+    </div>
+    <div class="mb-3">
+      <input [(ngModel)]="num2" type="number" placeholder="Number 2" class="form-control"/>
+    </div>
+    <div class="mb-3 ">
+      <button  (click)="performAddition()" class="btn btn-primary me-1">Add</button>
+      <button type="button" (click)="performSubtraction()" class="btn btn-info me-1">Subtract</button>
+      <button type="button"(click)="performMultiplication()" class="btn btn-warning me-1">Multiply</button>
+      <button type="button" (click)="performDivision()" class="btn btn-danger me-1">Divide</button>
+    </div>
+
+
+
+    <p>Result: {{ result }}</p>
+  </div>
+</section>

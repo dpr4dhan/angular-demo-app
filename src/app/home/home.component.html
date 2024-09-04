@@ -1,3 +1,19 @@
-<section class="py-5">
+<section class="p-5">
   <h4>Welcome to Home Page.</h4>
+  <h5>Players from Liverpool FC</h5>
+  <div class="row">
+    <div *ngFor="let player of players" class="col-md-3 my-2">
+      <div class="card">
+        <img src="{{ player.photo }}" class="card-img-top" alt="{{ player.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ player.name }}</h5>
+          <p class="card-text">
+            <b>Age:</b> {{ player.age}}<br/>
+            <b>Kit:</b> {{ player.number}}<br/>
+            <b>Position:</b> {{ player.position}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
