@@ -7,6 +7,7 @@ import {LoginComponent} from "./login/login.component";
 import {AuthGuard} from "./auth.guard";
 import {LogoutComponent} from "./logout/logout.component";
 import {CalculatorComponent} from "./calculator/calculator.component";
+import {GalleryComponent} from "./gallery/gallery.component";
 
 export const routes: Routes = [
   {
@@ -46,5 +47,11 @@ export const routes: Routes = [
     path: 'calculator',
     component: CalculatorComponent,
     title: 'Calculator'
+  },
+  {
+    path: 'gallery',
+    component: GalleryComponent,
+    title: 'Gallery'
   }
+
 ];

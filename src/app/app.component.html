@@ -21,6 +21,10 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLinkActive="active"
+               routerLink="/gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLinkActive="active"
                routerLink="/login" *ngIf="!authService.isLoggedIn()">Login</a>
           </li>
           <li class="nav-item">
@@ -38,5 +42,6 @@
   </nav>
   <section class="content">
     <router-outlet></router-outlet>
+
   </section>
 </main>

@@ -101,6 +101,39 @@
           }
         }
       }
+    },
+    "unsplash-image-search": {
+      "projectType": "library",
+      "root": "projects/unsplash-image-search",
+      "sourceRoot": "projects/unsplash-image-search/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/unsplash-image-search/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/unsplash-image-search/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/unsplash-image-search/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/unsplash-image-search/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
